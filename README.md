@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Bank of Flatiron
+Overview
+The Bank of Flatiron is a React-based web application that I built to manage and display recent bank transactions. With this application, I wanted to create a simple way for users to view, add, and filter transactions. The data is fetched from a local json-server instance and stored in the browser's local storage.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features:
+Display Transactions: I’ve set up a table to show all recent transactions.
+Add Transactions: Users can submit new transactions using a form I created.
+Filter Transactions: I’ve included a search bar that allows users to filter transactions by description.
+Local Storage: Added transactions are stored in the browser’s local storage for convenience.
+Project Structure
+I organized the project into several components, each handling a specific part of the application:
 
-## Available Scripts
+1. src/App.js
+Function: This is the main component of the application. It renders the SearchBar, TransactionForm, and TransactionsTable components.
+Responsibilities:
+Fetching transaction data from the local json-server.
+Managing state for transactions and search terms.
+Filtering transactions based on the user’s search input.
 
-In the project directory, you can run:
+2. src/components/TransactionForm.js
+Function: This component provides a form for users to input and submit new transactions.
+Responsibilities:
+Collecting user input for description, category, amount, and date.
+Submitting the form data and saving it to local storage.
+The date field defaults to the current date if not provided.
 
-### `npm start`
+3. src/components/TransactionsTable.js
+Function: This component renders a table displaying the list of transactions.
+Responsibilities:
+Displaying columns for description, category, amount, and date.
+Mapping over the list of transactions and creating rows for each entry.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. src/components/SearchBar.js
+Function: This component provides a search bar for filtering transactions.
+Responsibilities:
+Updating the search term in the parent component (App.js).
+Filtering transactions based on user input.

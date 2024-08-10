@@ -1,6 +1,6 @@
 # Bank of Flatiron
 
-Overview
+Overview:
 
 The Bank of Flatiron is a React-based web application that I built to manage and display recent bank transactions. With this application, I wanted to create a simple way for users to view, add, and filter transactions. The data is fetched from a local json-server instance and stored in the browser's local storage.
 
